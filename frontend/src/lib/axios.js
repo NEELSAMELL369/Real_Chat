@@ -1,9 +1,6 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL:
-    import.meta.env.MODE === "development"
-      ? "http://localhost:8080/api"
-      : "/api",
-  withCredentials: true, // Important for cookies
+  baseURL: "https://real-chat-n6ob.onrender.com", // deployed backend
+  withCredentials: true, // important for cookies
 });
