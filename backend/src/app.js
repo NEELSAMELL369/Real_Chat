@@ -14,7 +14,7 @@ app.use(cookieParser());
 // Enable CORS for your deployed frontend
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "https://real-chat-ggkyn85zt-neel-samels-projects.vercel.app",
+    origin: true,
     credentials: true,
   })
 );
