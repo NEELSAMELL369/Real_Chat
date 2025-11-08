@@ -31,6 +31,7 @@
 
 ---
 
+## 🛠 Tech Stack
 
 | **Frontend**                               | **Backend**                |
 | ------------------------------------------ | -------------------------- |
@@ -51,40 +52,89 @@
 ## 📂 Folder Structure
 
 ```
+REAL_CHAT/
+│
 ├── backend/
-│   ├── config/
-│   │   └── db.js
-│   ├── controllers/
-│   │   ├── auth.controller.js
-│   │   ├── income.controller.js
-│   │   ├── expense.controller.js
-│   │   └── dashboard.controller.js
-│   ├── middleware/
-│   │   ├── auth.middleware.js
-│   │   └── error.middleware.js
-│   ├── models/
-│   │   ├── user.model.js
-│   │   ├── income.model.js
-│   │   └── expense.model.js
-│   ├── routes/
-│   │   ├── auth.routes.js
-│   │   ├── income.routes.js
-│   │   ├── expense.routes.js
-│   │   └── dashboard.routes.js
-│   ├── uploads/
-│   ├── .env
-│   ├── server.js
-│   └── package.json
-├── frontend/
+│   ├── node_modules/
 │   ├── src/
-│   │   ├── components/      # Navbar, Footer, Sidebar
-│   │   ├── context/         # Auth, Income, Expense, Dashboard contexts
-│   │   ├── layouts/         # Layout wrapper
-│   │   ├── Pages/           # Auth, Dashboard, Income, Expense pages
-│   │   ├── Services/        # API calls
-│   │   ├── utils/           # Protected routes
-│   │   ├── App.jsx          # Root component
+│   │   ├── config/
+│   │   │   ├── cloudinary.js
+│   │   │   └── db.js
+│   │   │
+│   │   ├── controllers/
+│   │   │   ├── auth.controller.js
+│   │   │   └── message.controller.js
+│   │   │
+│   │   ├── middlewares/
+│   │   │   └── protectRoute.js
+│   │   │
+│   │   ├── models/
+│   │   │   ├── message.model.js
+│   │   │   └── user.model.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── auth.route.js
+│   │   │   └── message.route.js
+│   │   │
+│   │   ├── socket/
+│   │   │   └── socket.js
+│   │   │
+│   │   ├── utils/
+│   │   │   └── generateToken.js
+│   │   │
+│   │   ├── app.js
+│   │   └── server.js
+│   │
+│   ├── .env
+│   ├── package.json
+│   ├── package-lock.json
+│   └── README.md
+│
+├── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   │
+│   │   ├── components/
+│   │   │   ├── Chat/
+│   │   │   │   ├── ChatHeader.jsx
+│   │   │   │   ├── MessageInput.jsx
+│   │   │   │   └── MessageList.jsx
+│   │   │   │
+│   │   │   ├── Sidebar/
+│   │   │   │   ├── UserList.jsx
+│   │   │   │   └── Navbar.jsx
+│   │   │
+│   │   ├── lib/
+│   │   │   ├── axios.js
+│   │   │   └── socket.js
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Chat.jsx
+│   │   │   ├── Login.jsx
+│   │   │   └── Signup.jsx
+│   │   │
+│   │   ├── store/
+│   │   │   ├── useAuthStore.js
+│   │   │   └── useChatStore.js
+│   │   │
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   │
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   └── README.md
+│
+├── .gitignore
 └── README.md
+
 ```
 
 ---
@@ -134,6 +184,3 @@ npm start
 # Frontend
 npm run dev
 ```
-
-
-| GET    | `/api/dashboard` | Get dashboard data |
