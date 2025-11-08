@@ -123,7 +123,7 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 1️⃣ **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/expense-tracker.git
+git clone https://github.com/NEELSAMELL369/Expense_Tracker_MERN.git
 cd expense-tracker
 ```
 
@@ -131,7 +131,7 @@ cd expense-tracker
 
 ```bash
 # Backend
-tcd backend
+cd backend
 npm install
 
 # Frontend
