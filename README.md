@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://real-chat-azure.vercel.app/login">
+  <a href="https://real-chat-azure.vercel.app">
     <img src="https://img.shields.io/badge/Frontend-Live%20Demo-blue?style=for-the-badge&logo=react" alt="Frontend Live Demo">
   </a>
   <a href="https://real-chat-n6ob.onrender.com">
