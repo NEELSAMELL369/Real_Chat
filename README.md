@@ -1,5 +1,5 @@
 <h1 align=center>
-   🤳Real_Chat 
+   💬 Real_Chat 
 </h1>
 
 <p align="center">
@@ -18,47 +18,36 @@
 
 ---
 
-## 🚀 Features
+## Features ✨
 
-### **Frontend**
-
-* 🔐 **User Authentication** — Register, Login, Logout
-* 🖼 **Avatar Upload** on Registration (Cloudinary)
-* 💵 **Income Management** — Add, View, Delete, Export to Excel
-* 💳 **Expense Management** — Add, View, Delete, Export to Excel
-* 📊 **Dashboard Overview** — Total income, total expense, balance, recent transactions
-* 📜 **Recent Transactions** — Merged income & expenses sorted by date
-* 📱 **Responsive UI** with Tailwind CSS
-* 🛡 **Protected Routes** with JWT
-
-### **Backend**
-
-* 🗄 REST API with **Express.js**
-* 🛢 **MongoDB + Mongoose** for database
-* 🔑 **JWT Authentication** + bcrypt password hashing
-* 🖼 **Cloudinary** image uploads for avatars
-* 📥 **Excel Export** for income & expenses (ExcelJS)
-* ⚠ **Centralized Error Handling** with middleware
-* 📂 **Multer & express-fileupload** for handling files
+- User Authentication (Signup/Login/Logout) with JWT
+- Real-time chat using **Socket.io**
+- Online/offline user status
+- Message timestamps
+- Responsive UI
+- Toast notifications for actions
+- Simple and scalable folder structure
+- Zustand for global state management
 
 ---
 
-## 🛠 Tech Stack
+
+
+---
 
 | **Frontend**                               | **Backend**                |
 | ------------------------------------------ | -------------------------- |
-| React ^19.1.0                              | Node.js                    |
-| React Router DOM ^7.8.0                    | Express.js ^5.1.0          |
-| Tailwind CSS ^4.1.11 (+ @tailwindcss/vite) | MongoDB + Mongoose ^8.17.1 |
-| Axios ^1.11.0                              | JWT (jsonwebtoken ^9.0.2)  |
-| Recharts ^3.1.2                            | bcryptjs ^3.0.2            |
-| React Icons ^5.5.0                         | dotenv ^17.2.1             |
-| Lucide React ^0.536.0                      | cors ^2.8.5                |
-| Emoji Picker React ^4.13.2                 | cookie-parser ^1.4.7       |
-|                                            | multer ^2.0.2              |
-|                                            | express-fileupload ^1.5.2  |
-|                                            | exceljs ^4.4.0             |
-|                                            | cloudinary ^2.7.0          |
+| React ^19.1.1                              | Node.js                    |
+| React Router DOM ^7.9.5                    | Express.js ^5.1.0          |
+| Tailwind CSS ^4.1.17 (+ @tailwindcss/vite) | MongoDB + Mongoose ^8.19.3 |
+| Axios ^1.13.2                              | JWT (jsonwebtoken ^9.0.2)  |
+| React Hot Toast ^2.6.0                     | bcryptjs ^3.0.3            |
+| Lucide React ^0.553.0                      | dotenv ^17.2.3             |
+| Zustand ^5.0.8                             | cors ^2.8.5                |
+| Socket.io-client ^4.8.1                    | cookie-parser ^1.4.7       |
+|                                            | cloudinary ^2.8.0          |
+|                                            | nodemon ^3.1.10            |
+
 
 ---
 
@@ -108,7 +97,7 @@
 Create a `.env` file inside the **backend** folder:
 
 ```env
-PORT=5000
+PORT=8080
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 CLOUDINARY_CLOUD_NAME=your_cloudinary_name
@@ -123,7 +112,7 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 1️⃣ **Clone the repository**
 
 ```bash
-git clone https://github.com/NEELSAMELL369/Expense_Tracker_MERN.git
+git clone https://github.com/NEELSAMELL369/Real_Chat.git
 cd expense-tracker
 ```
 
@@ -143,44 +132,11 @@ npm install
 
 ```bash
 # Backend
-node server.js
+npm start
 
 # Frontend
 npm run dev
 ```
 
----
 
-## 📡 API Endpoints
-
-### Auth
-
-| Method | Endpoint             | Description         |
-| ------ | -------------------- | ------------------- |
-| POST   | `/api/auth/register` | Register a new user |
-| POST   | `/api/auth/login`    | Login user          |
-| POST   | `/api/auth/logout`   | Logout user         |
-
-### Income
-
-| Method | Endpoint             | Description             |
-| ------ | -------------------- | ----------------------- |
-| POST   | `/api/income`        | Add income              |
-| GET    | `/api/income`        | Get all incomes         |
-| DELETE | `/api/income/:id`    | Delete income           |
-| GET    | `/api/income/export` | Export incomes to Excel |
-
-### Expense
-
-| Method | Endpoint              | Description              |
-| ------ | --------------------- | ------------------------ |
-| POST   | `/api/expense`        | Add expense              |
-| GET    | `/api/expense`        | Get all expenses         |
-| DELETE | `/api/expense/:id`    | Delete expense           |
-| GET    | `/api/expense/export` | Export expenses to Excel |
-
-### Dashboard
-
-| Method | Endpoint         | Description        |
-| ------ | ---------------- | ------------------ |
 | GET    | `/api/dashboard` | Get dashboard data |
